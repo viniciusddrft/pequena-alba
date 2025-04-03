@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://dms546dw44o4s"]
+
+[ext_resource type="Texture2D" uid="uid://dotefwumvds1p" path="res://assets/custom/capa.jpeg" id="1_ots34"]
+[ext_resource type="Script" uid="uid://b6yuik0lqw1do" path="res://start.gd" id="1_qn1rc"]
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qn1rc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576.5, 324.5)
+scale = Vector2(1.06389, 0.593518)
+texture = ExtResource("1_ots34")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 445.0
+offset_right = 691.0
+offset_bottom = 476.0
+text = "Jogar
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://chn7jey8mk2wn"]
+
+[ext_resource type="Texture2D" uid="uid://bgjwjkeopj2l" path="res://assets/custom/arvore completa/arvore plataforma completa.png" id="1_f7cmv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lt4yx"]
+size = Vector2(10, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mehiu"]
+size = Vector2(42, 3)
+
+[node name="Sprite2D" type="Node2D"]
+scale = Vector2(4, 4)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f7cmv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(-15, 7)
+shape = SubResource("RectangleShape2D_lt4yx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, -2.5)
+shape = SubResource("RectangleShape2D_mehiu")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://chmd8oq072ips"]
+
+[ext_resource type="Texture2D" uid="uid://c6piygvhqwn3e" path="res://assets/custom/tronco/tronco plataforma.png" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = ExtResource("1_wtcfe")

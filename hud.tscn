@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8rhrdg0h8ang"]
+
+[ext_resource type="Texture2D" uid="uid://dk6dgoqhh7e5j" path="res://assets/custom/Coracao vida.png" id="1_37p78"]
+
+[node name="HUD" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(67, 55)
+texture = ExtResource("1_37p78")
+
+[node name="Sprite2D2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(142, 55)
+texture = ExtResource("1_37p78")
+
+[node name="Sprite2D3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(215, 56)
+texture = ExtResource("1_37p78")

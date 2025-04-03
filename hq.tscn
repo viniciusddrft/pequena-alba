@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccifrh77wo86l"]
+
+[ext_resource type="Script" uid="uid://cjpnk0hslh400" path="res://hq.gd" id="1_7tt6b"]
+[ext_resource type="Texture2D" uid="uid://cjtddo2p3xr5x" path="res://assets/custom/imagem quadrinho inicio.png" id="1_y5vmi"]
+
+[node name="HQ" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7tt6b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 325)
+texture = ExtResource("1_y5vmi")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1016.0
+offset_top = 611.0
+offset_right = 1102.0
+offset_bottom = 642.0
+text = "Continuar
+"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

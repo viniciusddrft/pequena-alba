@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://4qxxcdyd8ya4"]
+
+[ext_resource type="Script" uid="uid://b6jvxnf7xpndh" path="res://espinho.gd" id="1_mjb4k"]
+[ext_resource type="Texture2D" uid="uid://dsfkdfeahjhih" path="res://assets/custom/arvore/Arvore frame1.png" id="1_piof5"]
+[ext_resource type="Texture2D" uid="uid://c6xuj06m4p7x2" path="res://assets/custom/arvore/arvore frame 2.png" id="2_mjb4k"]
+[ext_resource type="Texture2D" uid="uid://c4xa206im8nlb" path="res://assets/custom/arvore/arvore frame 3.png" id="3_hhrce"]
+[ext_resource type="Texture2D" uid="uid://6sfy504qe44t" path="res://assets/custom/arvore/arvore frame 4.png" id="4_5ys7w"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mjb4k"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_piof5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_mjb4k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hhrce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5ys7w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_piof5"]
+size = Vector2(30, 26)
+
+[node name="arvoreQueimada" type="Node2D" node_paths=PackedStringArray("area2d")]
+scale = Vector2(2, 2)
+script = ExtResource("1_mjb4k")
+timeDamage = true
+area2d = NodePath("Area2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_mjb4k")
+autoplay = "default"
+frame_progress = 0.802044
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-5, 3)
+shape = SubResource("RectangleShape2D_piof5")
